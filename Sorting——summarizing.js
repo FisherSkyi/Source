@@ -28,6 +28,22 @@ function swap(A, x, y) {
 }
 
 const A = [3, 9, 2, 1, 6, 5, 3, 8];
-selection_sort(A);
+// selection_sort(A);
 A;
 
+// insertion sort
+function insertion_sort(A) {
+    const len = array_length(A);
+    for (let i = 1; i < len; i = i + 1) {
+        let j = i;
+        for(j; j >= 1; j = j - 1) {
+            if(A[j-1] > A[j]) {
+                swap(A, j, j-1); 
+            }
+        }
+    }
+    return A;
+}
+// const A = [3, 9, 2, 1, 6, 5, 3, 8];
+insertion_sort(A);
+A;
